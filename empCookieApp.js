@@ -1,5 +1,5 @@
 let express = require("express");
-const cors=require("cors");
+// const cors=require("cors");
 let app = express();
 app.use(express.json());
 app.use(function (req, res, next) {
@@ -16,8 +16,8 @@ next();
 });
 var port=process.env.port || 2410;
 app.listen(port, () => console.log(`Listening on port ${port}!`));
-app.use(cors(
-));
+// app.use(cors(
+// ));
 let {empCookiesData}=require("./empCookiesData.js");
 // console.log(empCookiesData);
 const cookieParser=require("cookie-parser");
